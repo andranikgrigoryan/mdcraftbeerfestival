@@ -24,6 +24,7 @@ const ButtonWrapper = styled.button`
   box-shadow: 0 2px 18px 0 rgb(0 0 0 / 30%);
   -webkit-text-size-adjust: 100%;
   vertical-align: baseline;
+  cursor: pointer;
   &:after {
     transition: all 300ms ease 0ms;
     font-size: 32px;

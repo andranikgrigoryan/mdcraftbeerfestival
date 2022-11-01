@@ -9,6 +9,8 @@ import Section3Wrapper, {
 } from './section3.styled';
 import Container from '../../../../components/container';
 import Button from '../../../../components/button';
+import Table from '../../../../components/table';
+import Accordion from '../../../../components/accordion';
 
 const Section3 = () => {
   return (
@@ -106,6 +108,7 @@ const Section3 = () => {
         <TitleWrapper>
           <h3 className="title">Who Will Be There?</h3>
         </TitleWrapper>
+        <Accordion />
       </Container>
     </Section3Wrapper>
   );
