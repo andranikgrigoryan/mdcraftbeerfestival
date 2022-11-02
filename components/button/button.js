@@ -1,10 +1,10 @@
 import React from 'react';
 import ButtonWrapper, { ButtonCentered } from './button.styled';
 
-const Button = ({ children }) => {
+const Button = ({ children, onClick }) => {
   return (
     <ButtonCentered>
-      <ButtonWrapper>{children}</ButtonWrapper>
+      <ButtonWrapper onClick={onClick}>{children}</ButtonWrapper>
     </ButtonCentered>
   );
 };

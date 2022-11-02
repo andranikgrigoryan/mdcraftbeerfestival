@@ -1,6 +1,6 @@
 import React from 'react';
 import TableWrapper, { Border, StyledTable, SubTitle, Title } from './table.styled';
-import { Text } from '../../pagesContent/homePage/sections/section2/section2.styled';
+import { Text } from '../../../pagesContent/homePage/sections/section2/section2.styled';
 import { arr } from './tableData';
 import Image from 'next/image';
 

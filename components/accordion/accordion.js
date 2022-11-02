@@ -1,35 +1,6 @@
 import React, { useRef, useState } from 'react';
 import AccordionStyled from './accordion.styled';
 import PlusIcon from '../../assets/PlusIcon';
-import Table from '../table';
-
-const faqs = [
-  {
-    id: 1,
-    header: 'PARTICIPATING BREWERIES & BEERS',
-    content: <Table />,
-  },
-  {
-    id: 2,
-    header: 'FESTIVAL MAP',
-    content: <h1>AAA</h1>,
-  },
-  {
-    id: 3,
-    header: 'LIVE MUSIC',
-    content: <h1>AAA</h1>,
-  },
-  {
-    id: 4,
-    header: 'FOOD & CRAFT VENDORS',
-    content: <h1>AAA</h1>,
-  },
-  {
-    id: 5,
-    header: '2022 EVENT PARTNERS',
-    content: <h1>AAA</h1>,
-  },
-];
 
 const AccordionItem = props => {
   const contentEl = useRef(null);
@@ -62,7 +33,7 @@ const AccordionItem = props => {
   );
 };
 
-const Accordion = () => {
+const Accordion = props => {
   const [active, setActive] = useState(1);
 
   const handleToggle = index => {
@@ -76,7 +47,7 @@ const Accordion = () => {
     <AccordionStyled>
       <div className="">
         <div className="card-body">
-          {faqs.map((faq, index) => {
+          {props.items.map((faq, index) => {
             return (
               <AccordionItem key={index} active={active} handleToggle={handleToggle} faq={faq} />
             );

@@ -6,13 +6,52 @@ import Section3Wrapper, {
   TitleWrapper,
   ButtonWrapper,
   Row2,
+  Row,
+  Col,
+  Link,
 } from './section3.styled';
 import Container from '../../../../components/container';
 import Button from '../../../../components/button';
-import Table from '../../../../components/table';
 import Accordion from '../../../../components/accordion';
+import Image from 'next/image';
+import slide1 from '../../../../assets/CBF8.jpeg';
+import { useRouter } from 'next/router';
+import Table from '../../../../components/firstAccordion/table';
+import FestivalMap from '../../../../components/firstAccordion/festivalMap';
+import LiveMusic from '../../../../components/firstAccordion/liveMusic';
+import FoodAndCraft from '../../../../components/firstAccordion/foodAndCraft';
+import EventPartners from '../../../../components/firstAccordion/eventPartners';
+
+const faqs = [
+  {
+    id: 1,
+    header: 'PARTICIPATING BREWERIES & BEERS',
+    content: <Table />,
+  },
+  {
+    id: 2,
+    header: 'FESTIVAL MAP',
+    content: <FestivalMap />,
+  },
+  {
+    id: 3,
+    header: 'LIVE MUSIC',
+    content: <LiveMusic />,
+  },
+  {
+    id: 4,
+    header: 'FOOD & CRAFT VENDORS',
+    content: <FoodAndCraft />,
+  },
+  {
+    id: 5,
+    header: '2022 EVENT PARTNERS',
+    content: <EventPartners />,
+  },
+];
 
 const Section3 = () => {
+  const router = useRouter();
   return (
     <Section3Wrapper>
       <Container>
@@ -108,7 +147,32 @@ const Section3 = () => {
         <TitleWrapper>
           <h3 className="title">Who Will Be There?</h3>
         </TitleWrapper>
-        <Accordion />
+        <Accordion items={faqs} />
+        <Row>
+          <Col>
+            <Link href="">
+              <Image src={slide1} alt={'any'} />
+            </Link>
+          </Col>
+          <Col>
+            <Link href="">
+              <Image src={slide1} alt={'any'} />
+            </Link>
+          </Col>
+          <Col>
+            <Link href="">
+              <Image src={slide1} alt={'any'} />
+            </Link>
+          </Col>
+          <Col>
+            <Link href="">
+              <Image src={slide1} alt={'any'} />
+            </Link>
+          </Col>
+        </Row>
+        <Button onClick={() => router.push('https://www.eventbrite.com/e/274865649557')}>
+          GET YOUR PASSES HERE
+        </Button>
       </Container>
     </Section3Wrapper>
   );

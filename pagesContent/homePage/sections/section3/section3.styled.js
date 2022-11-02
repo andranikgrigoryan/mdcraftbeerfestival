@@ -116,4 +116,40 @@ export const Row2 = styled.div`
   }
 `;
 
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  //gap: 5%;
+  margin-top: 30px;
+  @media (min-width: 981px) {
+    margin-top: 2.75%;
+  }
+`;
+
+export const Col = styled.div`
+  width: 100%;
+  max-width: 20%;
+  flex: 0 0 20%;
+  min-width: 225px;
+  margin-bottom: 5%;
+  @media (max-width: 980px) {
+    width: 30%;
+    max-width: 30%;
+    flex: 0 0 30%;
+  }
+`;
+
+export const Link = styled.a`
+  display: block;
+  width: 225px;
+  height: 160px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
 export default Section3Wrapper;
